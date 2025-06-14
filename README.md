@@ -1,62 +1,46 @@
-# Property Manager Backend
+User & Property Manager
 
-A NestJS backend service for managing properties with user authentication and PostgreSQL database.
+This application is a Full Stack Task designed to enable users to manage their properties after authentication. This is the server-side application implemented with NestJS, TypeORM, and JWT authentication.
 
-## Quick Start
+🔹Features
 
-1. Install dependencies:
-```bash
+User authentication (login and registration)
+
+Ability for authenticated users to create, view, update, and delete their own properties
+
+Each property includes a title, description, price, and location
+
+User-centric API for retrieving and managing properties
+
+🔹Technology Stack
+
+NestJS (Framework)
+
+TypeORM (Database ORM)
+
+JWT (JSON Web Token Authentication)
+
+Postgres (Database)
+
+🔹Installation
+
+To get started, follow these instructions:
+
+git clone 'https://github.com/AmerSamer/pal-server.git'
 npm install
-```
 
-2. Create `.env` file:
-```env
-DB_HOST=localhost
-DB_PORT=5432
-DB_USERNAME=postgres
-DB_PASSWORD=postgres
-DB_DATABASE=property_manager
-JWT_SECRET=your_jwt_secret_key
-PORT=3000
-```
+🔹Running
 
-3. Create PostgreSQL database:
-```bash
-createdb property_manager
-```
+To start the application in development:
 
-4. Start the server:
-```bash
 npm run start:dev
-```
 
-## API Endpoints
+Then connect to your API (typically at http://localhost:3000) with your preferred API testing tool (like Postman).
 
-### Auth
-- `POST /auth/register` - Register new user
-- `POST /auth/login` - Login user
+🔹Contributing
 
-### Properties (requires JWT)
-- `GET /properties` - List user's properties
-- `GET /properties/:id` - Get property details
-- `POST /properties` - Create new property
-- `PUT /properties/:id` - Update property
-- `DELETE /properties/:id` - Delete property
+Contributions are welcome! Please feel free to submit a Pull Request with your improvements or bug fixes.
 
-## Development
+🔹License
 
-```bash
-npm run start:dev    # Development mode
-npm run build       # Build for production
-npm run format      # Format code
-npm run lint        # Lint code
-```
-
-## Tech Stack
-
-- NestJS
-- TypeScript
-- PostgreSQL
-- TypeORM
-- JWT Authentication
-- bcrypt for password hashing
+This project is licensed under the MIT license.
